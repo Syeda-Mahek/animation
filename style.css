@@ -1,0 +1,117 @@
+/* file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/trees.png
+
+ file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/track.png
+
+file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/car_wheel_right.png
+
+file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/car_wheel_left.png
+
+file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/car_body.png
+
+file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/background.jpg */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* overflow: hidden; */
+      animation: shakebody linear 5s infinite;  
+} 
+.sky{
+    height:100vh;
+    width: 100%;
+    background-image: url(file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.trees{
+    height:100vh;
+    width: 100%;
+    background-image: url(file:///C:/Users/Welcome/Downloads/scenetrees.png);
+    background-size: cover;
+    position: absolute;
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(file:///C:/Users/Welcome/AppData/Local/Temp/Temp1_Car%20Aminated.zip/Car%20Aminated/track.png);
+
+    position: absolute;
+    background-repeat: repeat-x;
+    top: 100vh;
+     animation: carMove linear 8s infinite; 
+
+}
+
+.car{
+    height: 67px;
+    width: 380%;
+    background-image: url(file:///C:/Users/Welcome/Downloads/bodycar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom: 0px;
+    animation: shake linear .3s infinite;
+}
+
+
+
+.wheel1 img{
+    width: 53px;
+    position: relative;
+    top: 23px;
+    left: 25px;
+    animation: wheelRotation linear .10s infinite;
+}
+
+.wheel2 img{
+    width: 56px;
+    position: relative;
+    top: -35px;
+    left: 143px;
+    animation: wheelRotation linear .10s infinite;
+}
+
+@keyframes wheelRotation
+{
+    100%{
+transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes carMove
+{
+    100%{
+transform: translateX(-500vw);
+    }
+    
+}
+
+@keyframes shake
+{
+    0%{
+transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+            }
+           100%{
+                transform: translateY(-5px);
+                    }
+}
+ @keyframes shakebody
+{
+    0%{
+transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(50px);
+            }
+           100%{
+                transform: translateY(-50px);
+                    }
+} 
